@@ -1,13 +1,7 @@
 data "aws_iam_policy_document" "data_mining_access_s3" {
+
   statement {
     sid = "1"
-    effect = "Allow"
-    actions = ["s3:*"]
-    resources = ["arn:aws:s3:::datamining-solution/*"]
-
-  }
-  statement {
-    sid = "2"
     effect = "Allow"
     actions = [
       "s3:ListBucket",
@@ -19,7 +13,7 @@ data "aws_iam_policy_document" "data_mining_access_s3" {
     ]
   }
   statement {
-    sid = "3"
+    sid = "2"
     effect = "Allow"
     actions = ["s3:GetObject"]
     resources = [
@@ -29,7 +23,7 @@ data "aws_iam_policy_document" "data_mining_access_s3" {
   }
 
   statement {
-    sid = "4"
+    sid = "3"
     effect = "Allow"
     actions = ["s3:PutObject"]
     resources = [
@@ -39,7 +33,7 @@ data "aws_iam_policy_document" "data_mining_access_s3" {
   }
 
   statement {
-    sid = "5"
+    sid = "4"
     effect = "Allow"
     actions = ["s3:RemoveObject"]
     resources = [
