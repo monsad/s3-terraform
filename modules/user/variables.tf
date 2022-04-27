@@ -12,7 +12,7 @@ variable "create_iam_user_login_profile" {
 
 variable "user" {
   description = "User name"
-  type        = string
+  type        =  string
   default     = "datamining"
 }
 
@@ -20,6 +20,12 @@ variable "user" {
 variable "name" {
   description = "Desired name for the IAM user"
   type        = string
+}
+
+variable "attach_iam_self_management_policy" {
+  description = "Whether to attach IAM policy which allows IAM users to manage their credentials and MFA"
+  type        = bool
+  default     = true
 }
 
 /*variable "path" {
@@ -50,6 +56,8 @@ variable "password_length" {
   type        = number
   default     = 20
 }
+
+
 
 
 /*variable "permissions_boundary" {

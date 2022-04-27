@@ -1,5 +1,7 @@
 output "bucket_name" {
   description = "Name of the bucket"
-  value       = aws_s3_bucket.datamining-bucket.id
+  value       = aws_s3_bucket.this.id
 }
+
+
 

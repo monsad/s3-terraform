@@ -1,8 +1,10 @@
-resource "aws_s3_bucket" "datamining-bucket" {
+resource "aws_s3_bucket" "this" {
   bucket = var.bucket_name
 }
-resource "aws_s3_bucket_acl" "datamining_bucket_acl" {
-  bucket = aws_s3_bucket.datamining-bucket.id
+resource "aws_s3_bucket_acl" "this" {
+  bucket = aws_s3_bucket.this.id
   acl    = "private"
 }
+
+
 
