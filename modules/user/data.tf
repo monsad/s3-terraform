@@ -1,49 +1,26 @@
 data "aws_iam_policy_document" "data_mining_access_s3" {
 
   statement {
-    sid = "1"
-    effect = "Allow"
     actions = [
       "s3:ListBucket",
       "s3:GetBucketLocation"
     ]
-    resources = [
-      "arn:aws:s3:::datamining-solution/*",
-      "arn:aws:s3:::datamining-solution",
-    ]
-  }
-  statement {
-    sid = "2"
-    effect = "Allow"
-    actions = ["s3:GetObject"]
-    resources = [
-      "arn:aws:s3:::datamining-solution",
-      "arn:aws:s3:::datamining-solution/*",
-    ]
+    resources = ["arn:aws:s3:::datamining-solution",]
+    effect    = "Allow"
   }
 
   statement {
-    sid = "3"
-    effect = "Allow"
-    actions = ["s3:PutObject"]
-    resources = [
-      "arn:aws:s3:::datamining-solution",
-      "arn:aws:s3:::datamining-solution/*",
+    actions = [
+      "s3:PutObject",
+      "s3:RemoveObject",
+      "s3:GetObject",
     ]
-  }
-
-  statement {
-    sid = "4"
+    resources = ["arn:aws:s3:::datamining-solution/*",]
     effect = "Allow"
-    actions = ["s3:RemoveObject"]
-    resources = [
-      "arn:aws:s3:::datamining-solution",
-      "arn:aws:s3:::datamining-solution/*",
-    ]
-
   }
+}
 
- }
+
 
 
 
