@@ -19,7 +19,3 @@ resource "aws_iam_user_policy_attachment" "s2_policy" {
   policy_arn = module.iam_policy.policy_arn
   user       = var.name
 }
-
-
-
-
