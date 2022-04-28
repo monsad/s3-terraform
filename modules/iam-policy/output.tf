@@ -13,7 +13,3 @@ output "policy_arn" {
   description = "Assume role policy ARN of IAM group"
   value       = aws_iam_policy.policy.arn
 }
-
-
-
-
