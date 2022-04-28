@@ -8,6 +8,5 @@ module "user" {
   name = "datamining"
 }
 
-resource "null_resource" "terraform-docs"{
-
+  resource "null_resource" "terraform-docs"{
 }
