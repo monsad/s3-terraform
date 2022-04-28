@@ -1,6 +1,4 @@
 resource "aws_iam_policy" "policy" {
-  count = var.create_policy ? 1 : 0
-
   name        = var.name
   path        = var.path
   description = var.description
@@ -32,7 +30,3 @@ data "aws_iam_policy_document" "data_mining_access_s3" {
   }
 }
 
-resource "aws_iam_user_policy_attachment" "this" {
-  policy_arn = aws_iam_policy.policy.id
-  user= var.name
-}

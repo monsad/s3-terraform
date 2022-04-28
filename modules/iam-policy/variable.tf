@@ -7,7 +7,8 @@ variable "create_policy" {
 variable "name" {
   description = "The name of the policy"
   type        = string
-  default     = ""
+
+
 }
 
 variable "path" {

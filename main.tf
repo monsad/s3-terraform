@@ -4,7 +4,10 @@ module "s3_bucket" {
 }
 module "user" {
   source = "./modules/user"
-  name   = "datamining"
+  user = []
+  name = "datamining"
 }
 
+resource "null_resource" "terraform-docs"{
 
+}
