@@ -10,4 +10,3 @@ output "s3_bucket_arn" {
 output "s3_tags" {
   value = aws_s3_bucket.this.tags
 }
-
