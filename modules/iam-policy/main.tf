@@ -29,4 +29,3 @@ data "aws_iam_policy_document" "data_mining_access_s3" {
     effect = "Allow"
   }
 }
-
