@@ -7,8 +7,6 @@ variable "create_policy" {
 variable "name" {
   description = "The name of the policy"
   type        = string
-
-
 }
 
 variable "description" {
@@ -21,4 +19,14 @@ variable "policy" {
   description = "The path of the policy in IAM (tpl file)"
   type        = string
   default     = ""
+<<<<<<< HEAD:modules/iam_policy/variable.tf
 }
+=======
+}
+
+variable "tags" {
+  description = "A map of tags to add to all resources."
+  type        = map(string)
+  default     = {}
+}
+>>>>>>> d52a1c1d8bf29d511853b528ea9eba970342427f:modules/iam-policy/variable.tf

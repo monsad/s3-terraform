@@ -18,4 +18,8 @@ module "iam_policy" {
 resource "aws_iam_user_policy_attachment" "s2_policy" {
   policy_arn = module.iam_policy.arn
   user       = var.name
+<<<<<<< HEAD:modules/user/main.tf
 }
+=======
+}
+>>>>>>> d52a1c1d8bf29d511853b528ea9eba970342427f:modules/user/iam_user.tf

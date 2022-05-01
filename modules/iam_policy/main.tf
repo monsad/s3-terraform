@@ -21,4 +21,8 @@ data "aws_iam_policy_document" "data_mining_access_s3" {
     resources = ["arn:aws:s3:::${var.name}/*"]
     effect = "Allow"
   }
+<<<<<<< HEAD:modules/iam_policy/main.tf
 }
+=======
+}
+>>>>>>> d52a1c1d8bf29d511853b528ea9eba970342427f:modules/iam-policy/main.tf

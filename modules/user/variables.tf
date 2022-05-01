@@ -26,6 +26,7 @@ variable "pgp_key" {
   type        = string
   default     = ""
 }
+
 variable "password_reset_required" {
   description = "Whether the user should be forced to reset the generated password on first login."
   type        = bool
