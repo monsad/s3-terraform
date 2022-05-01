@@ -11,15 +11,11 @@ resource "aws_iam_user_login_profile" "data-mining" {
 }
 
 module "iam_policy" {
-  source = "../../modules/iam-policy"
+  source = "../iam_policy"
   name = var.name
 }
 
 resource "aws_iam_user_policy_attachment" "s2_policy" {
-  policy_arn = module.iam_policy.policy_arn
+  policy_arn = module.iam_policy.arn
   user       = var.name
 }
-
-
-
-
